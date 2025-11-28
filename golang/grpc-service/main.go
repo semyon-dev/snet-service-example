@@ -9,9 +9,10 @@ import (
 	"math/rand"
 	"net"
 	"os"
-	pb "snet-service-example/service"
 	"strconv"
 	"time"
+
+	"github.com/singnet/snet-service-example/golang/grpc-service/pb"
 
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/metadata"
@@ -73,7 +74,7 @@ func readMD(ctx context.Context) string {
 	}
 	//fmt.Printf("md: %+v", md)
 
-	addrs := md.Get("user-address")
+	addrs := md.Get("snet-user-address")
 	if len(addrs) == 0 {
 		return ""
 	}

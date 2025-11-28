@@ -1,7 +1,8 @@
 syntax = "proto3";
 package service;
 import "training.proto";
-option go_package = "../service";
+option go_package = "/pb";
+
 
 message sttResp{
   string result = 1;
